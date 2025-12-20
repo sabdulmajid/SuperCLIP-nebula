@@ -1,0 +1,10 @@
+venv/
+__pycache__/
+*.pyc
+
+cluster_instructions.md
+scripts/
+logs/checkpoints/
+wandb/
+cache/
+data/
