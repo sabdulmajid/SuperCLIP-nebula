@@ -15,8 +15,9 @@ Evaluated on held-out **COCO-2017 Validation** data.
 
 | Model Config | Recall@1 | Recall@5 | Recall@10 | Hardware |
 | --- | --- | --- | --- | --- |
-| **SuperCLIP (Ours)** | **46.6%** | **75.5%** | **86.8%** | 2x A4500 (20GB) |
-| *Vanilla CLIP Baseline* | *~35.0%* | *~60.0%* | *~72.0%* | *Estimated for now* |
+| **SuperCLIP** | **46.60%** | **75.50%** | **86.80%** | 2x A4500 (20GB) |
+| Vanilla CLIP Baseline | 42.30% | 72.20% | 83.60% | 2x A4500 (20GB) |
+| **Improvement** | **+4.3%** | **+3.3%** | **+3.2%** | |
 
 > **Note:** Achieved **92.4% Recall@1** on the training set (convergence check), validating the custom loss implementation and distributed gathering logic.
 

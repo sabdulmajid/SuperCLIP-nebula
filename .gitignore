@@ -4,7 +4,7 @@ __pycache__/
 
 cluster_instructions.md
 scripts/
-logs/checkpoints/
+logs/
 wandb/
 cache/
 data/
