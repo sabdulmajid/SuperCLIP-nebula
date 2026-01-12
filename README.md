@@ -10,6 +10,19 @@ This implementation was engineered to run efficiently on a **dual-node NVIDIA A4
 
 ### **Key Results**
 
+> **"Does Token Supervision force the model to 'see' objects earlier?"**
+
+Beyond standard metrics, I conducted a mechanistic study to map the internal attention circuits of the Vision Transformer.
+
+**The Discovery: Late-Stage Crystallization**
+I initially hypothesized that SuperCLIP would ground objects early (Layer 7). However, rigorous testing falsified this. Automated circuit discovery revealed that while the model "scans" early on, precise spatial grounding is a late-stage phenomenon, crystallizing generally at **Layer 12**.
+
+![Champion vs Challenger](research/plots/champion_vs_challenger.gif)
+*Figure: (Left) Layer 7 attempts to focus but fades (our initial hypothesis). (Right) **Layer 12 Head 6** locks onto the object with 81% precision.*
+
+[**Read the Full Research Report & Analysis**](./research/README.md)
+*(Includes automated circuit sweeps, ablation studies, and falsification of the "Early Grounding" hypothesis)*
+
 Evaluated on held-out **COCO-2017 Validation** data.
 *Train Set: 4,000 Images | Test Set: 1,000 Images (Strict Split) [due to academic compute constraint]*
 
